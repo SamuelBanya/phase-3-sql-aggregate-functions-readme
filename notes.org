@@ -1,0 +1,29 @@
+Related 'Aggregate Functions' from SQL:
+- AVG: Returns the average
+- SUM: Returns the sum
+- COUNT: Counts records
+- MIN: Returns the min value
+- MAX: Returns the max value
+
+These are the commands I used:
+#+begin_src sql
+sqlite3 pets_database.db
+
+sqlite> SELECT AVG(net_worth) FROM cats;
+1050700.0
+
+sqlite> SELECT AVG(net_worth) AS average_net_worth FROM cats;
+1050700.0
+
+sqlite> SELECT SUM(net_worth) FROM cats;
+4202800
+
+sqlite> SELECT MIN(net_worth) FROM cats;
+21000
+
+sqlite> SELECT COUNT(name) FROM cats;
+4
+
+sqlite> SELECT COUNT(*) FROM cats WHERE net_worth > 1000000;
+1
+#+end_src
